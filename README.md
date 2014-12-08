@@ -18,6 +18,8 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 1 measured
 Compare with 100 day above.
 
 ```sh
+~/D/perf_sma ❯❯❯ julia -v
+julia version 0.4.0-dev+1756
 ~/D/perf_sma ❯❯❯ julia sma.jl
 elapsed time: 0.004547032 seconds (2800264 bytes allocated)
 sma_original = 3
