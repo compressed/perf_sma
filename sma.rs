@@ -22,7 +22,7 @@ fn sma(avect: &Vec<f32>, num_per: uint) -> Vec<f32> {
 }
 
 #[bench]
-fn bench_sma(b: &mut Bencher) {
+fn bench_sma_100(b: &mut Bencher) {
     let mut rng = rand::task_rng();
     let between = Range::new(0f32, 1.);
     let f32_data: Vec<f32> = range(0u, N).map(|_|

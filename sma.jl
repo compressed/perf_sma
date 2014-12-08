@@ -32,14 +32,20 @@ function tester()
 
   f32_data = rand(Float32, n)
   @time rand(Float32, n)
-  #= @time sma_original(f32_data, 3) =#
-  #= @time sma_original(f32_data, 14) =#
-  #= @time sma_original(f32_data, 100) =#
+  println("sma_original = 3")
+  @time sma_original(f32_data, 3)
+  println("sma_original = 14")
+  @time sma_original(f32_data, 14)
+  println("sma_original = 100")
+  @time sma_original(f32_data, 100)
+  println("sma_original = 600")
+  @time sma_original(f32_data, 600)
 
-  @time sma_improved(f32_data, 3)
-  @time sma_improved(f32_data, 14)
+  #= @time sma_improved(f32_data, 3) =#
+  #= @time sma_improved(f32_data, 14) =#
+  println("sma_improved = 100")
   @time sma_improved(f32_data, 100)
-  @time sma_improved(f32_data, 600)
+  #= @time sma_improved(f32_data, 600) =#
 end
 
 tester()
