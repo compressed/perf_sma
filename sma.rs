@@ -25,8 +25,9 @@ fn sma(avect: &Vec<f32>, num_per: uint) -> Vec<f32> {
 fn bench_sma_100(b: &mut Bencher) {
     let mut rng = rand::task_rng();
     let between = Range::new(0f32, 1.);
-    let f32_data: Vec<f32> = Vec::from_fn(N,
-        |_| between.ind_sample(&mut rng));
+    let f32_data: Vec<f32> = range(0, N)
+        .map(|_| between.ind_sample(&mut rng))
+        .collect();
 
     b.iter(|| {
         sma(&f32_data, 100);
